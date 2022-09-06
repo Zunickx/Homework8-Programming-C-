@@ -1,16 +1,15 @@
 ﻿// Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива
 
 int[,] matrixArray = new int[3, 4];
-Random array = new Random();
-
 
 void FillArray()
 {
+    Random rndArray = new Random();
     for(int i = 0; i < matrixArray.GetLength(0); i++)
     {
         for(int j = 0; j < matrixArray.GetLength(1); j++)
         {
-            matrixArray[i, j] = array.Next(0, 50);
+            matrixArray[i, j] = rndArray.Next(0, 50);
         }
         Console.WriteLine();
     }
